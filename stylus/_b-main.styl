@@ -1,1 +1,43 @@
 /* Основная часть */
+.b-main
+  position: relative
+  margin-left: 300px
+  padding: 50px 50px 0
+  width: unquote("-webkit-calc(100% - 300px)")
+  width: unquote("-moz-calc(100% - 300px)")
+  width: unquote("calc(100% - 300px)")
+
+  &__header
+    font-size: (45/16)*1em
+    line-height: 1em
+
+  &__list
+    margin: 50px 0 0
+    padding: 0
+    list-style: none
+    font-size: (26/16)*1em
+    line-height: 3.5em
+
+    &_state_hidden
+      display: none
+
+  &__item
+    margin: 0 0 10px
+
+  &__photo
+    float: left
+    margin-right: 10px
+    width: 100px
+    height: 100px
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    border-radius: 50%
+
+  &__name
+    color: #000
+
+  &__text
+    font-size: (20/16)*1em
+
+    a
+      color: #000
