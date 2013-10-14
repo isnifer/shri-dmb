@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="shri">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -17,34 +17,33 @@
 
     <div class="b-page">
 
-        <div class="b-sidebar">
+        <div class="b-sidebar" ng-controller="Sidebar">
 
             <header class="b-sidebar__header">Выпускной альбом</header>
 
             <ul class="b-sidebar__list">
                 <li class="b-sidebar__item">
-                    <a class="b-sidebar__link b-sidebar__link_state_active" href="#">Школа</a>
+                    <a class="b-sidebar__link" ng-class="getClass('#/')" href="#/">Школа</a>
                 </li>
                 <li class="b-sidebar__item">
-                    <a class="b-sidebar__link" href="#">Студенты</a>
+                    <a class="b-sidebar__link" ng-class="getClass('#/students/', '#/student')" href="#/students">Студенты</a>
                 </li>
                 <li class="b-sidebar__item">
-                    <a class="b-sidebar__link" href="#">Лекторы</a>
+                    <a class="b-sidebar__link" ng-class="getClass('#/lecturers/', '#/lecturer')" href="#/lecturers">Лекторы</a>
                 </li>
                 <li class="b-sidebar__item">
-                    <a class="b-sidebar__link" href="#">Лекции</a>
+                    <a class="b-sidebar__link" ng-class="getClass('#/lectures/', '#/lecture')" href="#/lectures">Лекции</a>
                 </li>
             </ul>
 
         </div>
 
-        <div class="b-main g-clf">
-
-        </div>
+        <div class="b-main g-clf" ng-view></div>
 
     </div>
 
-    <script src="http://localhost:35729/livereload.js"></script>
+    <script type="text/javascript" src="js/libs/angular-1.0.8.min.js"></script>
+    <script type="text/javascript" src="js/myApp.js"></script>
 
 </body>
 </html>

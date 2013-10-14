@@ -1,0 +1,16 @@
+<!-- Карточка лекции -->
+<header class="b-main__header">{{ title }}</header>
+
+<div class="b-lecture">
+    <div class="b-lecture__man g-clf">
+        <img class="b-lecture__photo" src="{{ lecturer.photo_url }}" alt=""/>
+        <a href="#/lecturer/{{ lecturer.id }}" class="b-lecture__name">{{ lecturer.name }}</a>
+    </div>
+
+    <div ng-show="lecture.video_url" class="b-lecture__video">
+        <iframe class="player" src="{{ lecture.video_url }}"></iframe>
+    </div>
+    <div ng-show="lecture.slides_url" class="b-lecture__slides">
+        <iframe ng-show="{{ lecture.slides_url }}" src="{{ lecture.slides_url }}" scrolling="no" allowfullscreen></iframe>
+    </div>
+</div>

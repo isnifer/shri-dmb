@@ -1,0 +1,8 @@
+<!-- Список лекторов -->
+<header class="b-main__header">{{ title }}</header>
+<ul class="b-main__list">
+    <li class="b-main__item g-clf" ng-repeat="lecturer in lecturers">
+        <img class="b-main__photo" ng-src="{{ lecturer.photo_url }}" src="" title="{{ lecturer.name }}"/>
+        <a class="b-main__name" href="#/lecturer/{{ lecturer.id }}">{{ lecturer.name }}</a>
+    </li>
+</ul>
