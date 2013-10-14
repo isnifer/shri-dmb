@@ -1,6 +1,6 @@
 /* Сайдбар */
 .b-sidebar
-  position: absolute
+  position: fixed
   top: 0
   bottom: 0
   left: 0
@@ -38,12 +38,12 @@
 
     &_state_active
 
-      &:after
+      &:before
         position: absolute
         top: 0
-        left: 140%
+        left: -30px
         display: block
-        width: 40px
+        width: 18px
         height: 40px
-        background: url(../img/b-sidebar/arrow.png) no-repeat 0 0
+        background: url(../img/b-sidebar/arrow.jpg) no-repeat 0 0
         content: ""
