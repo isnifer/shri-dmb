@@ -6,11 +6,6 @@ module.exports = function (grunt) {
 
         watch: {
 
-            script: {
-                files: ['js/common.js'],
-                tasks: ['uglify']
-            },
-
             livereload: {
                 options: {
                     livereload: true,
@@ -49,17 +44,6 @@ module.exports = function (grunt) {
 
         },
 
-        uglify: {
-            options: {
-                mangle: false
-            },
-            target: {
-                files: {
-                    'js/common.min.js': 'js/common.js'
-                }
-            }
-        },
-
         'ftp-deploy': {
             build: {
                 auth: {
@@ -69,7 +53,7 @@ module.exports = function (grunt) {
                 },
                 //src: 'D:/Webservers/domains/dmb.dev/',
                 src: 'C:/Webservers/domains/dmb.dev/',
-                dest: '/kuznetsovanton.ru/public_html/projects/dmb',
+                dest: '/kuznetsovanton.ru/public_html/projects/shri-dmb',
                 exclusions: ['node_modules', '**/Thumbs.db', '.git', '.idea', '.gitignore', '.ftppass']
             }
         }
@@ -77,7 +61,6 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-stylus');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-ftp-deploy');

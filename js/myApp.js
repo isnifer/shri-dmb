@@ -96,7 +96,7 @@ myApp.controller('Lecturers', function ($scope, $http, $routeParams) {
         
         // Если приходят данные с ID лектора
         if ($routeParams.id) {
-            // Определяем, что это за лектора
+            // Определяем, что это за лектор
             $scope.lecturer = (function () {
                 for (j; j < lecturersLength; j++) {
                     if (data[j].id === lecturerId) {
@@ -166,7 +166,7 @@ myApp.controller('Lectures', function ($scope, $http, $routeParams) {
 
     /**
      * Хелпер для вывода данных о каждом лекторе в списке лекций
-     * @param {Number} id Идентификатор лектор
+     * @param {Number} id Идентификатор лектора
      * @param {String} prop Название свойства, которое необходимо вернуть 
      *
      * @example  
@@ -202,8 +202,8 @@ myApp.controller('Sidebar', function ($scope) {
 
     /**
      * Хелпер для вывода активного состояния ссылки на раздел
-     * @param {String} path Хеш страницы раздела: Лекторы
-     * @param {String} subpath Хеш страницы подраздела: Карточка лектора 
+     * @param {String} path Хеш страницы раздела
+     * @param {String} subpath Хеш страницы подраздела 
      *
      * @example  
      * getClass('#/lectures/', '#/lecture')
