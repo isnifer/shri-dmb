@@ -1,0 +1,63 @@
+/* Лекторы */
+.b-lecturer
+
+  &__profile
+    margin: 20px 0
+
+  &__photo
+    position: relative
+    top: 7px
+    float: left
+    margin: 0 10px 15px 0
+    max-width: 150px
+
+  &__text
+    font-size: (22/16)*1em
+    line-height: 1.5em
+
+  &__talks
+    font-size: (18/16)*1em
+
+  &__title
+    margin: 10px 0 0
+
+  &__list
+    display: block
+    margin: 10px 0 0 10px
+    padding: 0
+    list-style: none
+
+    &_state_hidden
+      display: none
+
+  &__item
+    margin-bottom: 5px
+
+  &__link
+    position: relative
+    padding-left: 10px
+    color: #0040D0
+
+    &:after, &:before 
+      position: absolute
+      top: 55%
+      left: 0
+      width: 0
+      height: 0
+      border: solid transparent
+      border-left-color: #000
+      content: " "
+      pointer-events: none
+
+    &:after
+      margin-top: -4px
+      border-width: 4px
+
+    &:before
+      margin-top: -5px
+      border-width: 5px
+
+  &__all-lectures
+    border-bottom: 1px dashed #333
+    color: #333
+    cursor: pointer

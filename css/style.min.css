@@ -1,4 +1,59 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin,cyrillic");
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .g-clf:after,.g-clf:before{clear:both;display:table;content:""}
-html,body{height:100%;font:normal 16px "Arial",Verdana,Tahoma}
+html,body{height:100%;font:normal 16px "Open Sans Condensed",Verdana,Tahoma}
 .b-page{position:relative;min-height:100%}
+.b-sidebar{position:fixed;top:0;bottom:0;left:0;width:300px;background:#fc0;}
+.b-sidebar__header{position:relative;top:100px;left:-120px;color:#fff;font-size:2.625em;-webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);-o-transform:rotate(-90deg);transform:rotate(-90deg)}
+.b-sidebar__list{margin:30px 0 0 150px;padding:0;list-style:none;font-size:1.5625em}
+.b-sidebar__item{margin:0 0 5px}
+.b-sidebar__link{position:relative;color:#fff;text-decoration:none;}
+.b-sidebar__link:hover,.b-sidebar__link_state_active{color:#000}
+.b-sidebar__link_state_active:before{position:absolute;top:0;left:-30px;display:block;width:18px;height:40px;background:url("../img/b-sidebar/arrow.jpg") no-repeat 0 0;content:""}
+.b-main{position:relative;margin-left:300px;padding:50px 50px 0;width:-webkit-calc(100% - 300px);width:-moz-calc(100% - 300px);width:calc(100% - 300px);}
+.b-main__header{font-size:2.8125em;line-height:1em}
+.b-main__list{margin:50px 0 0;padding:0;list-style:none;font-size:1.625em;line-height:3.5em;}
+.b-main__list_state_hidden{display:none}
+.b-main__item{margin:0 0 10px}
+.b-main__photo{float:left;margin-right:10px;width:100px;height:100px;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;background-position:center;background-size:120px}
+.b-main__name{color:#000}
+.b-main__text{font-size:1.25em;}
+.b-main__text p{margin:10px 0}
+.b-main__text a{color:#000}
+.b-main__video{float:right;margin-top:15px;width:480px;height:270px;}
+.b-main__video iframe{width:480px;height:270px;border:0}
+.b-student{margin:30px 0 0;}
+.b-student__photo{max-width:150px;float:left;margin:0 10px 10px 0;position:relative;top:7px}
+.b-student__text{font-size:1.125em;line-height:1.5em}
+.b-lecturer__profile{margin:20px 0}
+.b-lecturer__photo{position:relative;top:7px;float:left;margin:0 10px 15px 0;max-width:150px}
+.b-lecturer__text{font-size:1.375em;line-height:1.5em}
+.b-lecturer__talks{font-size:1.125em}
+.b-lecturer__title{margin:10px 0 0}
+.b-lecturer__list{display:block;margin:10px 0 0 10px;padding:0;list-style:none;}
+.b-lecturer__list_state_hidden{display:none}
+.b-lecturer__item{margin-bottom:5px}
+.b-lecturer__link{position:relative;padding-left:10px;color:#0040d0;}
+.b-lecturer__link:after,.b-lecturer__link:before{position:absolute;top:55%;left:0;width:0;height:0;border:solid transparent;border-left-color:#000;content:" ";pointer-events:none}
+.b-lecturer__link:after{margin-top:-4px;border-width:4px}
+.b-lecturer__link:before{margin-top:-5px;border-width:5px}
+.b-lecturer__all-lectures{border-bottom:1px dashed #333;color:#333;cursor:pointer}
+.b-lectures__label{display:block;margin:20px 0}
+.b-lectures__input{height:40px;outline:none;border:none;border-bottom:1px solid #8f9894;color:#000;font-size:1.875em;line-height:1.4em;}
+.b-lectures__input:focus{border-color:#626a66}
+.b-lectures__list{margin:0;padding:0;list-style:none}
+.b-lectures__item{margin-bottom:10px;padding:20px;width:600px;border:1px solid #e1e1e1}
+.b-lectures__link{color:#0040d0}
+.b-lectures__title{color:#000;font-weight:700;font-size:2.1875em;line-height:1em}
+.b-lectures__author{margin:10px 0 0;font-size:1.5625em;line-height:1em;}
+.b-lectures__author:first-letter{color:#f00}
+.b-lectures__author-link{border-bottom:1px dashed #a9a9a9;color:#a9a9a9;text-decoration:none}
+.b-lectures__photo{margin:20px 0 0;width:100px;border-radius:50%}
+.b-lecture__man{margin:20px 0}
+.b-lecture__photo{float:left;margin-right:15px;width:200px}
+.b-lecture__name{overflow:hidden;margin:0;color:#000;font-size:1.5em;line-height:1em;}
+.b-lecture__name:hover{color:#f00}
+.b-lecture__video,.b-lecture__slides{margin-bottom:20px;width:750px;}
+.b-lecture__video iframe,.b-lecture__slides iframe{margin:0;width:750px;height:238px;border:0}
+.b-lecture__slides{margin-bottom:5px;border:1px solid #ccc;}
+.b-lecture__slides iframe{display:block !important;width:750px;height:617px}

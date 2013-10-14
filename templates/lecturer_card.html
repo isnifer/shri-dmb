@@ -1,0 +1,29 @@
+<!-- Карточка лектора -->
+<header class="b-main__header">{{ title }}</header>
+<div class="b-lecturer">
+    <div class="b-lecturer__profile g-clf">
+        <img class="b-lecturer__photo" src="{{ lecturer.photo_url }}" title="{{ title }}">
+        <div class="b-lecturer__text">{{ lecturer.about }}</div>
+    </div>
+    <div class="b-lecturer__talks g-clf">
+
+        <p class="b-lecturer__title">Список лекций преподавателя в рамках ШРИ 2013:</p>
+        <ul class="b-lecturer__list">
+            <li class="b-lecturer__item" ng-repeat="lecture in lecturer.shri">
+                <a class="b-lecturer__link" href="#/lecture/{{ lecture.shri_id }}">{{ lecture.name }}</a>
+            </li>
+        </ul>
+
+        <div ng-show="lecturer.all_lectures">
+            <span class="b-lecturer__all-lectures view-all-lectures">
+                Посмотреть список всех лекций преподавателя:
+            </span>
+            <ul class="b-lecturer__list b-lecturer__list_state_hidden b-lecturer__list_all">
+                <li class="b-lecturer__item" ng-repeat="lecture in lecturer.all_lectures">
+                    <a class="b-lecturer__link" target="_blank" href="http://tech.yandex.ru{{ lecture.url }}" title="Откроется в новом окне">{{ lecture.name }}</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>

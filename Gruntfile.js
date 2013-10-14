@@ -5,12 +5,10 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         watch: {
-            scripts: {
-                files: ['**/*.js'],
-                tasks: ['jshint'],
-                options: {
-                    interrupt: true
-                }
+
+            script: {
+                files: ['js/common.js'],
+                tasks: ['uglify']
             },
 
             livereload: {

@@ -1,0 +1,39 @@
+/* Карточка лекции */
+.b-lecture
+
+  &__man
+    margin: 20px 0
+
+  &__photo
+    float: left
+    margin-right: 15px
+    width: 200px
+
+  &__name
+    overflow: hidden
+    margin: 0
+    color: #000
+    font-size: (24/16)*1em
+    line-height: 1em
+
+    &:hover
+      color: #ff0000
+
+  &__video, &__slides
+    margin-bottom: 20px
+    width: 750px
+
+    iframe
+      margin: 0
+      width: 750px
+      height: 238px
+      border: 0
+
+  &__slides
+    margin-bottom: 5px
+    border: 1px solid #CCC
+
+    iframe
+      display: block !important
+      width: 750px
+      height: 617px

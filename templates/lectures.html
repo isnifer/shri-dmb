@@ -1,0 +1,22 @@
+<!-- Список лекций -->
+<header class="b-main__header">{{ title }}</header>
+<div class="b-lectures">
+
+    <form>
+        <label class="b-lectures__label">
+            <input class="b-lectures__input" ng-model="filterLectures" type="text" placeholder="Найти лекцию" autofocus="true" />
+        </label>
+    </form>
+    <ul class="b-lectures__list">
+        <li class="b-lectures__item g-clf" ng-repeat="lecture in lectures | filter:filterLectures">
+            <a class="b-lectures__title" href="#/lecture/{{ lecture.id }}">{{ lecture.name }}</a>
+            <p class="b-lectures__author">
+                <a class="b-lectures__author-link" href="#/lecturer/{{ lecture.lector_id }}">
+                    {{ lecturer(lecture.lector_id, 'name') }}
+                </a>
+            </p>
+            <img class="b-lectures__photo" ng-src="{{ lecturer(lecture.lector_id, 'photo_url') }}" src=""/>
+        </li>
+    </ul>
+
+</div>

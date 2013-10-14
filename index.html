@@ -1,11 +1,11 @@
 <!doctype html>
-<html>
+<html ng-app="shri">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Project Name</title>
-    <meta name="description" content="Short page description"/>
-    <meta name="keywords" content="first second third key word"/>
+    <title>Школа разработки интерфейсов</title>
+    <meta name="description" content="Домашнее задание в рамках ШРИ 2013"/>
+    <meta name="keywords" content="ШРИ, Яндекс, Разработка, Интерфейсы"/>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/style.min.css"/>
     <!--[if lt IE 9]>
@@ -17,16 +17,33 @@
 
     <div class="b-page">
 
-        <header class="b-header"></header>
+        <div class="b-sidebar" ng-controller="Sidebar">
 
-        <div class="b-main"></div>
+            <header class="b-sidebar__header">Выпускной альбом</header>
 
-        <footer class="b-footer"></footer>
+            <ul class="b-sidebar__list">
+                <li class="b-sidebar__item">
+                    <a class="b-sidebar__link" ng-class="getClass('#/')" href="#/">Школа</a>
+                </li>
+                <li class="b-sidebar__item">
+                    <a class="b-sidebar__link" ng-class="getClass('#/students/', '#/student')" href="#/students">Студенты</a>
+                </li>
+                <li class="b-sidebar__item">
+                    <a class="b-sidebar__link" ng-class="getClass('#/lecturers/', '#/lecturer')" href="#/lecturers">Лекторы</a>
+                </li>
+                <li class="b-sidebar__item">
+                    <a class="b-sidebar__link" ng-class="getClass('#/lectures/', '#/lecture')" href="#/lectures">Лекции</a>
+                </li>
+            </ul>
 
+        </div>
+
+        <div class="b-main g-clf" ng-view></div>
 
     </div>
 
-    <script src="http://localhost:35729/livereload.js"></script>
+    <script type="text/javascript" src="js/libs/angular-1.0.8.min.js"></script>
+    <script type="text/javascript" src="js/myApp.js"></script>
 
 </body>
 </html>
