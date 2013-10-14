@@ -17,22 +17,22 @@
 
     <div class="b-page">
 
-        <div class="b-sidebar">
+        <div class="b-sidebar" ng-controller="Sidebar">
 
             <header class="b-sidebar__header">Выпускной альбом</header>
 
             <ul class="b-sidebar__list">
                 <li class="b-sidebar__item">
-                    <a class="b-sidebar__link b-sidebar__link_state_active" href="/">Школа</a>
+                    <a class="b-sidebar__link" ng-class="getClass('#/')" href="#/">Школа</a>
                 </li>
                 <li class="b-sidebar__item">
-                    <a class="b-sidebar__link" href="/#/students">Студенты</a>
+                    <a class="b-sidebar__link" ng-class="getClass('#/students/', '#/student')" href="#/students">Студенты</a>
                 </li>
                 <li class="b-sidebar__item">
-                    <a class="b-sidebar__link" href="/#/lecturers">Лекторы</a>
+                    <a class="b-sidebar__link" ng-class="getClass('#/lecturers/', '#/lecturer')" href="#/lecturers">Лекторы</a>
                 </li>
                 <li class="b-sidebar__item">
-                    <a class="b-sidebar__link" href="/#/lectures">Лекции</a>
+                    <a class="b-sidebar__link" ng-class="getClass('#/lectures/', '#/lecture')" href="#/lectures">Лекции</a>
                 </li>
             </ul>
 
@@ -43,10 +43,7 @@
     </div>
 
     <script type="text/javascript" src="js/libs/angular-1.0.8.min.js"></script>
-    <script type="text/javascript" src="js/libs/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/myApp.js"></script>
-    <script src="http://localhost:35729/livereload.js"></script>
 
 </body>
 </html>

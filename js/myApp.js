@@ -197,6 +197,29 @@ myApp.controller('Lectures', function ($scope, $http, $routeParams) {
 
 });
 
+/* Sidebar */
+myApp.controller('Sidebar', function ($scope) {
+
+    /**
+     * Хелпер для вывода активного состояния ссылки на раздел
+     * @param {String} path Хеш страницы раздела: Лекторы
+     * @param {String} subpath Хеш страницы подраздела: Карточка лектора 
+     *
+     * @example  
+     * getClass('#/lectures/', '#/lecture')
+     *   
+     * @returns {String}  
+     */
+    $scope.getClass = function(path, subpath) {
+        if (location.hash === path || location.hash.substring(0, location.hash.indexOf('/', 3)) === subpath) {
+            return "b-sidebar__link_state_active"
+        } else {
+            return ""
+        }
+    }
+
+});
+
 /* Переключалка списка всех лекций автора */
 myApp.directive('viewAllLectures', function () {
 
