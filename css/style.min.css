@@ -38,3 +38,22 @@ html,body{height:100%;font:normal 16px "Open Sans Condensed",Verdana,Tahoma}
 .b-lecturer__link:after{margin-top:-4px;border-width:4px}
 .b-lecturer__link:before{margin-top:-5px;border-width:5px}
 .b-lecturer__all-lectures{border-bottom:1px dashed #333;color:#333;cursor:pointer}
+.b-lectures__label{display:block;margin:20px 0}
+.b-lectures__input{height:40px;outline:none;border:none;border-bottom:1px solid #8f9894;color:#000;font-size:1.875em;line-height:1.4em;}
+.b-lectures__input:focus{border-color:#626a66}
+.b-lectures__list{margin:0;padding:0;list-style:none}
+.b-lectures__item{margin-bottom:10px;padding:20px;width:600px;border:1px solid #e1e1e1}
+.b-lectures__link{color:#0040d0}
+.b-lectures__title{color:#000;font-weight:700;font-size:2.1875em;line-height:1em}
+.b-lectures__author{margin:10px 0 0;font-size:1.5625em;line-height:1em;}
+.b-lectures__author:first-letter{color:#f00}
+.b-lectures__author-link{border-bottom:1px dashed #a9a9a9;color:#a9a9a9;text-decoration:none}
+.b-lectures__photo{margin:20px 0 0;width:100px;border-radius:50%}
+.b-lecture__man{margin:20px 0}
+.b-lecture__photo{float:left;margin-right:15px;width:200px}
+.b-lecture__name{overflow:hidden;margin:0;color:#000;font-size:1.5em;line-height:1em;}
+.b-lecture__name:hover{color:#f00}
+.b-lecture__video,.b-lecture__slides{margin-bottom:20px;width:750px;}
+.b-lecture__video iframe,.b-lecture__slides iframe{margin:0;width:750px;height:238px;border:0}
+.b-lecture__slides{margin-bottom:5px;border:1px solid #ccc;}
+.b-lecture__slides iframe{display:block !important;width:750px;height:617px}

@@ -1,7 +1,7 @@
 <header class="b-main__header">{{ title }}</header>
 <ul class="b-main__list">
-    <li class="b-main__item g-clf" ng-repeat="profile in students">
-        <img class="b-main__photo" ng-src="{{ profile.link_photo }}" src="" title="{{ profile.first_name }} {{ profile.last_name }}"/>
-        <a class="b-main__name" href="#/profile/{{ $index + 1 }}">{{ profile.first_name }} {{ profile.last_name }}</a>
+    <li class="b-main__item g-clf" ng-repeat="student in students">
+        <img class="b-main__photo" ng-src="{{ student.link_photo }}" src="" title="{{ student.first_name }} {{ profile.last_name }}"/>
+        <a class="b-main__name" href="#/student/{{ $index + 1 }}">{{ student.first_name }} {{ student.last_name }}</a>
     </li>
 </ul>
