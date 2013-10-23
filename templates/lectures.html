@@ -8,7 +8,7 @@
         </label>
     </form>
     <ul class="b-lectures__list">
-        <li class="b-lectures__item g-clf" ng-repeat="lecture in lectures | filter:filterLectures">
+        <li class="b-lectures__item g-clf" ng-repeat="lecture in lectures | filter: {name: filterLectures} ">
             <a class="b-lectures__title" href="#/lecture/{{ lecture.id }}">{{ lecture.name }}</a>
             <p class="b-lectures__author">
                 <a class="b-lectures__author-link" href="#/lecturer/{{ lecture.lector_id }}">

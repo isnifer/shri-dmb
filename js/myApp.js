@@ -1,4 +1,4 @@
-var myApp = angular.module('shri', []);
+var myApp = angular.module('shri', ['ngRoute']);
 
 myApp.config(function ($routeProvider) {
 
